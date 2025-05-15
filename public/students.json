@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "name": "Siddhesh Mali",
+    "age": 16,
+    "gender": "Male",
+    "standard": "10th",
+    "fatherName": "D. Mali",
+    "photo": "/images/student1.jpg"
+  }
+]

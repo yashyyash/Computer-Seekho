@@ -1,0 +1,16 @@
+.hero-container {
+  flex: 1;
+  padding: 0 2rem; /* left and right padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px); /* adjust '80px' according to your header + navbar height */
+  box-sizing: border-box;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  object-fit: contain;
+}
