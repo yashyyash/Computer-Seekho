@@ -1,3 +1,10 @@
+// navbar.jsx
+// This component is responsible for rendering the navigation bar of the application
+// It includes links to different sections of the website
+// The component uses React Router for navigation
+// The component uses CSS for styling
+// The component is a functional component
+// all pages are linked to the home page and the same navigation bar should be used in all pages
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';

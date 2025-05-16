@@ -1,3 +1,5 @@
+// Header.jsx
+// This component is responsible for rendering the hero section of the application
 import React from 'react';
 import './Hero.css';
 
