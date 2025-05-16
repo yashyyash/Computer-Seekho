@@ -89,12 +89,42 @@ This frontend is designed to integrate with the C# Web API backend.
 
 ---
 
+## 💡 Inspiration
+
+This project is a CDAC Final Project to simplify and promote computer learning for beginners and students.
+
+---
 ## 🙋‍♂️ Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+🚀 **Contributing Guidelines**
+
+To contribute to this project, please follow the steps below to ensure a clean and collaborative workflow:
+
+1. **Create a New Branch**
+   Name your branch using the format:
+   `YourName_YourTask`
+   *(e.g., `Rahul_AddLoginFeature`)*
+
+2. **Switch to Your Branch**
+   Make sure to work only within the branch you've just created.
+
+3. **Implement Your Changes Locally**
+   Develop and test your changes thoroughly on your local machine.
+
+4. **Record a Demo**
+   Once your feature or fix is working, create a **short video** demonstrating its functionality. This helps everyone understand what’s been implemented.
+
+5. **Push and Create a Pull Request**
+
+   * Push your branch to the remote repository.
+   * Create a **Pull Request (PR)** to merge it into the `main` branch.
+   * Assign reviewers if needed and add a description of your changes.
+
+❗ **Important:**
+**Do not push changes directly to the `main` branch.** Always work on a separate branch and use PRs for merging.
+
+Thank you for contributing and maintaining project quality! 🙌
+
 ---
-
-## 💡 Inspiration
-
-This project is a CDAC Final Project to simplify and promote computer learning for beginners and students.
