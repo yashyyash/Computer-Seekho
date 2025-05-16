@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'; // Importing React and necessary hooks
 import './Home.css'; // Importing the CSS file for styling
+import CoursesOffered from '../components/CoursesOffered'; // adjust the path if needed
 
 // Functional component for the Home page
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
   return (
     <div className="home">
       {/* Content for Home page will go here */}
+       <CoursesOffered />
     </div>
   );
 };
