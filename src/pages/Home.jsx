@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from 'react'; // Importing React and necessary hooks
-import './Home.css'; // Importing the CSS file for styling
-import CoursesOffered from '../components/CoursesOffered'; // adjust the path if needed
+// Home.jsx
+import React from 'react';
+import Hero from '../components/Hero';
+import CoursesOffered from '../components/CoursesOffered';
+import MajorRecruiters from '../components/MajorRecruiters';
 
-// Functional component for the Home page
 const Home = () => {
-  // Component JSX return
   return (
-    <div className="home">
-      {/* Content for Home page will go here */}
-       <CoursesOffered />
+    <div>
+      <Hero />
+      <CoursesOffered />
+      <MajorRecruiters />
     </div>
   );
 };
 
-export default Home; // Exporting the Home component for use in other parts of the app
+export default Home;
