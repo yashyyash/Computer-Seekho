@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import NotificationBar from './components/NotificationBar';
-
+// trying changes 
 const App = () => {
   return (
     <>
