@@ -12,8 +12,7 @@ const Home = () => {
       <Hero />
       <CoursesOffered />
       <MajorRecruiters />
-      <Whyvita />
-      
+      <Whyvita /> 
     </div>
   );
 };
