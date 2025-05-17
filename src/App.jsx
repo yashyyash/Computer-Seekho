@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Navbar from './components/Navbar';
 import NotificationBar from './components/NotificationBar';
 import Footer from './components/Footer';
+import BatchwisePlacement from './pages/BatchwisePlacement';
 
 const App = () => {
   return (
@@ -17,6 +18,8 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/placement" element={<BatchwisePlacement />} />
+
       </Routes>
 
       <Footer />
