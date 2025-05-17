@@ -25,9 +25,13 @@ const Navbar = () => {
       <ul className="nav-list">
         {navItems.map((item, index) => (
           <li key={index} className="nav-item">
-            <Link to="/" className="nav-link">
-              {item.toUpperCase()}
-            </Link>
+           <Link
+  to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s+/g, '')}`}
+  className="nav-link"
+>
+  {item.toUpperCase()}
+</Link>
+
           </li>
         ))}
       </ul>
