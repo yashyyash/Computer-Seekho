@@ -9,10 +9,12 @@ import Whyvita from '../components/Whyvita';
 const Home = () => {
   return (
     <div>
+      {/* Hi i am jidnyasa*/}
       <Hero />
       <CoursesOffered />
       <MajorRecruiters />
       <Whyvita /> 
+      {/* wow i like this footer */}
     </div>
   );
 };
