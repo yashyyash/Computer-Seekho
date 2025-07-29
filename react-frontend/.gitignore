@@ -1,0 +1,50 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Vite cache
+.vite/
+
+# dotenv environment files (add only if you're using env vars)
+.env
+.env.local
+.env.*.local
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Optional: macOS/Linux files
+*.swp
+*.bak
+*.tmp
+*~
+
+# Optional: Windows-specific files
+ehthumbs.db
+desktop.ini
+
+# Optional: coverage reports if using testing
+coverage/
+
+# Optional: lock files depending on your choice (keep one)
+package-lock.json
+# yarn.lock
+# pnpm-lock.yaml

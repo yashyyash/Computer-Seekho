@@ -1,0 +1,84 @@
+.add-course-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.form-heading {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.add-course-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.add-course-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.add-course-form input,
+.add-course-form textarea {
+  padding: 8px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.submit-btn {
+  grid-column: span 2;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.course-table th,
+.course-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.course-table th {
+  background-color: #f2f2f2;
+}
+
+.update-btn,
+.delete-btn {
+  margin: 2px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+}
+
+.update-btn {
+  background-color: #2196f3;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
