@@ -11,7 +11,6 @@ const ManageWebsiteData = () => {
     { name: "Campus Life", route: "/add-campus-life" },
     { name: "Faculty", route: "/add-faculty" },
     { name: "Batchwise Placement", route: "/add-batch-placement" },
-    { name: "Students Placed per Batch", route: "/add-students-per-batch" },
     { name: "Recruiters", route: "/add-recruiters" },
   ];
 
