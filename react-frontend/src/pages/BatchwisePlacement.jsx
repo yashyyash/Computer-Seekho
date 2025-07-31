@@ -185,7 +185,7 @@ import './BatchwisePlacement.css';
 //revision 3
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import "./BatchwisePlacement.css"
 const BatchwisePlacement = () => {
   const [placementData, setPlacementData] = useState([]);
   const navigate = useNavigate();
