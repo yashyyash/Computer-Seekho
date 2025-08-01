@@ -232,3 +232,52 @@ INSERT INTO `recruiters` (`recruiter_id`, `company_name`, `contact_person`, `con
 (4, 'Cognizant', 'Vikram Rao', 'vikram.rao@cognizant.com', 'https://www.cognizant.com'),
 (5, 'Capgemini India', 'Sneha Patil', 'sneha.patil@capgemini.com', 'https://www.capgemini.com');
 
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+August 1 Data : for BatchPlacementController.java CourseController.java PlacedStudentController.java
+
+INSERT INTO batch_placement_master (batch_id, batch_name, placement_percentage, batch_logo_url, is_active, created_at) VALUES
+(1, 'PG DAC March 2024', 79, '/public/batchwisePlacement/dac_March24.jpg', 1, '2025-07-28 12:18:28'),
+(2, 'PG DAC Sept 2023', 70, '/public/batchwisePlacement/dac_Sept23.jpg', 1, '2025-07-28 12:18:28'),
+(3, 'PG DAC March 2023', 67, '/public/batchwisePlacement/dac_march23.png', 1, '2025-07-28 12:18:28'),
+(4, 'PG DAC Sept 2022', 70, '/public/batchwisePlacement/dac_sept22.png', 1, '2025-07-28 12:18:28'),
+(5, 'DAC March 2022', 90, '/public/batchwisePlacement/DAC_march22.png', 1, '2025-07-28 12:18:28'),
+(6, 'e-DAC Sept 2021', 100, '/public/batchwisePlacement/dac_sept21.png', 1, '2025-07-28 12:18:28'),
+(7, 'e-DAC May 2021', 100, '/public/batchwisePlacement/DAC_may21.png', 1, '2025-07-28 12:18:28'),
+(8, 'e-DAC Sep 2020', 100, '/public/batchwisePlacement/DAC_sep20.png', 1, '2025-07-28 12:18:28'),
+(9, 'PG-DAC Feb 2020', 100, '/public/batchwisePlacement/DAC_feb20.png', 1, '2025-07-28 12:18:28'),
+(10, 'PG-DAC Feb 2020', 90, '/public/batchwisePlacement/dac_aug19.png', 1, '2025-07-28 12:18:28'),
+(11, 'PG-DAC Aug 2019', 90, '/public/batchwisePlacement/dac_aug19.png', 1, '2025-07-28 12:18:28'),
+(12, 'PG-DAC Feb 2019', 100, '/public/batchwisePlacement/feb19.png', 1, '2025-07-28 12:18:28'),
+(13, 'PG-DAC Aug 2018', 100, '/public/batchwisePlacement/aug18.png', 1, '2025-07-28 12:18:28'),
+(14, 'PG-DAC Feb 2018', 100, '/public/batchwisePlacement/feb18.png', 1, '2025-07-28 12:18:28'),
+(15, 'PG-DAC Aug 2017', 98, '/public/batchwisePlacement/aug17.png', 1, '2025-07-28 12:18:28'),
+(16, 'PG-DAC Feb 2017', 97, '/public/batchwisePlacement/feb17.png', 1, '2025-07-28 12:18:28'),
+(17, 'PG-DAC Aug 2016', 100, '/public/batchwisePlacement/aug16.png', 1, '2025-07-28 12:18:28'),
+(18, 'PG-DAC Feb 2016', 97, '/public/batchwisePlacement/feb16.png', 1, '2025-07-28 12:18:28'),
+(19, 'PG-DAC Aug 2015', 100, '/public/batchwisePlacement/aug15.png', 1, '2025-07-28 12:18:28'),
+(20, 'PG-DAC Feb 2015', 100, '/public/batchwisePlacement/feb15.png', 1, '2025-07-28 12:18:28');
+
+
+INSERT INTO courses (course_id, course_name, course_code, description, duration, total_fee, is_active, syllabus, age_group, cover_photo_url) VALUES
+(1, 'PGDAC', '1', 'ADVANCE COMPUTING COURSE', '6 MONTH', 160000, 1, 'c++ dsa dbms os java javaadv wpt', 21, 'courses/dac.png'),
+(2, 'PGDBDA', '2', 'ADVANCE DATA ANALYTICS COURSE', '6 MONTHS', 125000, 1, 'aws python java', 20, 'courses/dbda.png'),
+(3, 'MSCIT', '3', 'BASIC COMPUTERS', '3 MONTH', 25000, 1, 'ms office', NULL, 'courses/mscit.png'),
+(4, 'FUNDAMENTAL COMPUTER', '4', 'COURSE', '1 MONTH', 10000, 0, 'awsysya', 5, 'https://mscit.mkcl.org/user/pages/01.home/_slider/MS-CIT%20Web%20Banner%202025-min_7.jpg');
+
+
+INSERT INTO batchwise_placed_students (student_id, company_name, created_at, is_active, photo_url, student_name, batch_id) VALUES
+(1, 'Landmark Pvt Ltd', NULL, 1, '/public/students/dac_March24/AAKANKSHA KHAIRNAR_SMVITA.jpg', 'AAKANKSHA KHAIRNAR', 1),
+(2, 'Inogic', NULL, 1, '/public/students/dac_March24/ABHISHEK KARMORE_SMVITA.jpg', 'ABHISHEK KARMORE', 1),
+(3, 'IDBI Intech Limited', NULL, 1, '/public/students/dac_March24/ABHISHEK SHELKE_SMVITA.jpg', 'ABHISHEK SHELKE', 1),
+(4, '63 moons technologies limited', NULL, 1, '/public/students/dac_March24/AJINKYA MALI_SMVITA.jpg', 'AJINKYA MALI', 1),
+(5, 'SmartStream Technologies', NULL, 1, '/public/students/dac_March24/AKSHAY GHANEKAR_SMVITA.jpg', 'AKSHAY GHANEKAR', 1),
+(6, '63 moons technologies limited', NULL, 1, '/public/students/dac_March24/AKSHAYKUMAR FAGARE_SMVITA.jpg', 'AKSHAYKUMAR FAGARE', 1),
+(7, 'NeoSOFT', NULL, 1, '/public/students/dac_March24/ANKLESH BHUTE_SMVITA.jpg', 'ANKLESH BHUTE', 1),
+(8, 'IDBI Intech Limited', NULL, 1, '/public/students/dac_March24/ASHITOSH KUDTARKAR_SMVITA.jpg', 'ASHITOSH KUDTARKAR', 1),
+(9, '63 moons technologies limited', NULL, 1, '/public/students/dac_March24/ASHUTOSH TRIPATHI_SMVITA.jpg', 'ASHUTOSH TRIPATHI', 1),
+(10, 'Capgemini', NULL, 1, '/public/students/dac_March24/AVADHUT GHADGE_SMVITA.jpg', 'AVADHUT GHADGE', 1);
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
