@@ -10,7 +10,7 @@ build/
 .mvn/wrapper/maven-wrapper.jar
 
 # Ignore properties files in resources
-src/main/resources/application.properties
+src/main/resources/*.properties
 
 # STS (Spring Tool Suite)
 .apt_generated
