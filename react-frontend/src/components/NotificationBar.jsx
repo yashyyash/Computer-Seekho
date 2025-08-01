@@ -1,21 +1,34 @@
-// notification bar component
-// This component is responsible for rendering the notification bar of the application
-// It includes a marquee that scrolls important announcements
-// The component uses CSS for styling
-// The component is a functional component
-// Currently, the notification bar is static and does not fetch data from an API but has to be dynamic
-// The notification bar is a separate component and can be reused in other parts of the application
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import './NotificationBar.css';
 
 const NotificationBar = () => {
+  const [announcements, setAnnouncements] = useState([]);
+
+  useEffect(() => {
+    const fetchAnnouncements = async () => {
+      try {
+        const response = await axios.get('http://localhost:8080/api/announcements');
+        setAnnouncements(response.data);
+      } catch (error) {
+        console.error('Failed to fetch announcements:', error);
+      }
+    };
+
+    fetchAnnouncements();
+  }, []);
+
   return (
     <div className="notification-bar">
       <div className="marquee">
         <p>
-          Admissions open for 2025 – Apply Now! &nbsp; | &nbsp;
-          Campus placements begin from July 1st. &nbsp; | &nbsp;
-          Check out our new PG diploma courses!
+          {announcements
+            .filter(item => item.aIsActive)
+            .map((item, index) => (
+              <span key={index}>
+                {item.aDesc} &nbsp; | &nbsp;
+              </span>
+            ))}
         </p>
       </div>
     </div>
