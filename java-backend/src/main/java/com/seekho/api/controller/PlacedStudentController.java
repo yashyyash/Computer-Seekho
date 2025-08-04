@@ -9,6 +9,10 @@ import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
+//1. POST /api/students – Add a Placed Student
+//2. GET /api/students/batch/{batchId} – Get Students by Batch
+//3. PUT /api/students/{id} – Update a Student
+//4. DELETE /api/students/{id} – Delete a Student
 @RequestMapping("/api/students")
 public class PlacedStudentController {
     private final PlacedStudentService service;
