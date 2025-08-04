@@ -1,33 +1,15 @@
-//package com.seekho.api.entity;
+//package com.seekho.api.dto;
 //
-//import jakarta.persistence.*;
 //import java.time.LocalDate;
 //
-//@Entity
-//@Table(name = "payment")
-//public class Payment {
+//public class PaymentDTO {
 //
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "payment_id")
 //    private int paymentId;
-//
-//    @Column(name = "payment_type_id")
 //    private int paymentTypeId;
-//
-//    @Column(name = "payment_date")
 //    private LocalDate paymentDate;
-//
-//    @Column(name = "student_id")
 //    private int studentId;
-//
-//    @Column(name = "course_id")
 //    private int courseId;
-//
-//    @Column(name = "batch_id")
 //    private int batchId;
-//
-//    @Column(name = "amount")
 //    private int amount;
 //
 //    // Getters and Setters
@@ -64,20 +46,20 @@
 //        this.studentId = studentId;
 //    }
 //
-//    public int getCourseId() {
-//        return courseId;
-//    }
-//
-//    public void setCourseId(int courseId) {
-//        this.courseId = courseId;
-//    }
-//
 //    public int getBatchId() {
 //        return batchId;
 //    }
 //
 //    public void setBatchId(int batchId) {
 //        this.batchId = batchId;
+//    }
+//
+//    public int getCourseId() {
+//        return courseId;
+//    }
+//
+//    public void setCourseId(int courseId) {
+//        this.courseId = courseId;
 //    }
 //
 //    public int getAmount() {
@@ -90,26 +72,19 @@
 //}
 
 
-package com.seekho.api.entity;
+package com.seekho.api.dto;
 
-import jakarta.persistence.*;
 import java.time.LocalDate;
 
-@Entity
-@Table(name = "payment")
-public class Payment {
+public class PaymentDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long payment_id;
-
     private Long payment_type_id;
     private LocalDate payment_date;
     private Long student_id;
     private Long course_id;
     private Long batch_id;
     private Double amount;
-
 
     // Getters and Setters
 
@@ -169,4 +144,3 @@ public class Payment {
         this.amount = amount;
     }
 }
-
