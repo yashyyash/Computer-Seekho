@@ -1,5 +1,5 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useNavigate, } from "react-router-dom";
 import "./AdminPage.css";
 
 const dummyFollowUps = [
@@ -10,16 +10,35 @@ const dummyFollowUps = [
 const AdminPage = () => {
   const navigate = useNavigate();
 
+  const handleLogout = () => {
+    localStorage.removeItem("isLoggedIn");
+    window.location.href = "/login";
+    navigate("/");
+  };
+
+  useEffect(() => {
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+  if (!isLoggedIn) {
+    window.location.href = "/login"; 
+  }
+}, []);
+
   return (
     <div className="admin-container">
-      <h1 className="admin-heading">
-        Welcome, <span className="staff-name">Staff Name</span>
-      </h1>
+      <div className="admin-header">
+        <h1 className="admin-heading">
+          Welcome, <span className="staff-name">Staff Name</span>
+        </h1>
+        
+      </div>
 
       <div className="admin-buttons">
         <button className="btn btn-green">Add Enquiry</button>
         <button className="btn btn-blue" onClick={() => navigate("/manage-data")}>
           Manage Website Data
+        </button>
+        <button className="btn btn-red logout-btn" onClick={handleLogout}>
+          Logout
         </button>
       </div>
 
