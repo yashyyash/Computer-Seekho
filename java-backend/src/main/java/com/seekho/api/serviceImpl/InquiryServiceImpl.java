@@ -26,6 +26,14 @@ public class InquiryServiceImpl implements InquiryService {
 
     @Override
     public List<InquiryDTO> getAllInquiries() {
+
+//        testing Delay
+//        try {
+//            Thread.sleep(2500); // Delay for 2.5 seconds
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+
         List<Inquiry> inquiries = inquiryRepository.findAll();
         return inquiries.stream()
                 .map(InquiryMapper::toDTO)

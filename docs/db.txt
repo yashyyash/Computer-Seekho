@@ -281,3 +281,10 @@ INSERT INTO batchwise_placed_students (student_id, company_name, created_at, is_
 (10, 'Capgemini', NULL, 1, '/public/students/dac_March24/AVADHUT GHADGE_SMVITA.jpg', 'AVADHUT GHADGE', 1);
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+INSERT INTO followup (enquiry_id, followup_date, followup_msg, is_active, staff_id)
+VALUES
+  (301, '2025-08-06', 'Called but no answer. Will try again tomorrow.', 1, 15),
+  (305, '2025-08-06', 'Client is on vacation, follow up next week.', 1, 12),
+  (410, '2025-08-07', 'Initial contact made. Client seems interested.', 1, 12);
+
+INSERT INTO staff_master (  staff_id, staff_name, photo_url, staff_mobile,  staff_email, staff_username, staff_password, staff_role) VALUES(3, 'Abhishek Karmore', '/students/dac_March24/ABHISHEK KARMORE_SMVITA.jpg', '9876543210', 'abhishek.karmore@example.com', 'abhishek.karmore@example.com', 'passKarmore123', 'Teaching Staff'),(4, 'Abhishek Shelke', '/students/dac_March24/ABHISHEK SHELKE_SMVITA.jpg', '9123456780', 'abhishek.shelke@example.com', 'abhishek.shelke@example.com', 'passShelke123', 'Non Teaching');

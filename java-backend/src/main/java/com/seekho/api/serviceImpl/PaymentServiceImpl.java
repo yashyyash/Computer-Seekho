@@ -91,6 +91,12 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Override
     public PaymentDTO create(PaymentDTO dto) {
+//        testing Delay Payment delay
+//        try {
+//            Thread.sleep(2500); // Delay for 2.5 seconds
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         Payment entity = PaymentMapper.toEntity(dto);
         return PaymentMapper.toDTO(paymentRepository.save(entity));
     }
