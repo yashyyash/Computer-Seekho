@@ -17,6 +17,8 @@ import EditBatchwisePlacedStudents from './pages/EditBatchwisePlacedStudents';
 import AddMarquee from './pages/AddMarquee';
 import Login from './pages/Login';
 import ProtectedRoute from './pages/ProtectedRoute';
+import PaymentPage from './pages/PaymentPage';
+import ReceiptPage from './pages/ReceiptPage';
 
 const App = () => {
   return (
@@ -86,6 +88,28 @@ const App = () => {
               <EditBatchwisePlacedStudents />
             </ProtectedRoute>
           }
+        />
+
+
+          <Route 
+        
+        path="/payments" 
+        element={
+        <ProtectedRoute>
+          <PaymentPage />
+        </ProtectedRoute>
+        } 
+        
+        />
+        <Route 
+        path="/receipt/:id" 
+        element={
+          
+          <ProtectedRoute>
+            <ReceiptPage />
+          </ProtectedRoute>
+      
+      } 
         />
       </Routes>
 
