@@ -1,53 +1,15 @@
-//package com.seekho.api.controller;
-//
-//import com.seekho.api.dto.ReceiptDTO;
-//import com.seekho.api.service.ReceiptService;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.web.bind.annotation.*;
-//
-//import java.util.List;
-//
-//@RestController
-//@RequestMapping("/api/receipts")
-//public class ReceiptController {
-//
-//    @Autowired
-//    private ReceiptService receiptService;
-//
-//    @PostMapping
-//    public ReceiptDTO createReceipt(@RequestBody ReceiptDTO dto) {
-//        return receiptService.createReceipt(dto);
-//    }
-//
-//    @GetMapping("/{id}")
-//    public ReceiptDTO getReceiptById(@PathVariable int id) {
-//        return receiptService.getReceiptById(id);
-//    }
-//
-//    @GetMapping
-//    public List<ReceiptDTO> getAllReceipts() {
-//        return receiptService.getAllReceipts();
-//    }
-//
-//    @PutMapping("/{id}")
-//    public ReceiptDTO updateReceipt(@PathVariable int id, @RequestBody ReceiptDTO dto) {
-//        return receiptService.updateReceipt(id, dto);
-//    }
-//
-//    @DeleteMapping("/{id}")
-//    public void deleteReceipt(@PathVariable int id) {
-//        receiptService.deleteReceipt(id);
-//    }
-//}
-
-
 package com.seekho.api.controller;
 
 import com.seekho.api.dto.ReceiptDTO;
 import com.seekho.api.service.ReceiptService;
+import com.seekho.api.utility.PdfReceiptGenerator;  // This is our utility class for PDF
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.ByteArrayOutputStream;
 import java.util.List;
 
 @RestController
@@ -75,5 +37,25 @@ public class ReceiptController {
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
         receiptService.delete(id);
+    }
+
+    // ✅ New PDF endpoint
+    @GetMapping("/{id}/pdf")
+    public ResponseEntity<byte[]> generateReceiptPdf(@PathVariable Long id) {
+        ReceiptDTO receipt = receiptService.getById(id);
+
+        ByteArrayOutputStream pdfStream = PdfReceiptGenerator.generateReceiptPDF(
+                String.valueOf(receipt.getReceipt_id()),
+                String.valueOf(receipt.getReceipt_date()),
+                receipt.getReceipt_amount(),
+                receipt.getPayment_id(),
+                String.valueOf("saurabh"),
+                Integer.valueOf("544255")
+        );
+
+        return ResponseEntity.ok()
+                .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=receipt_" + id + ".pdf")
+                .contentType(MediaType.APPLICATION_PDF)
+                .body(pdfStream.toByteArray());
     }
 }
