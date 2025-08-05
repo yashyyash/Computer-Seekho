@@ -12,6 +12,9 @@ build/
 # Ignore properties files in resources
 src/main/resources/*.properties
 
+#Ignore logs files in resources
+logs
+
 # STS (Spring Tool Suite)
 .apt_generated
 .classpath
