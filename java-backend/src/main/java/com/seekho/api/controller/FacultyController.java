@@ -7,6 +7,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+//   GET: /api/faculty
+//   GET BY ID: /api/faculty/{Id}
+//   POST ID:   /api/faculty
+//   PUT BY ID: /api/faculty/{Id}
+//   Delete by ID: /api/faculty/{Id}
 @RequestMapping("/api/faculty")
 public class FacultyController {
 

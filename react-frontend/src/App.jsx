@@ -19,6 +19,8 @@ import Login from './pages/Login';
 import ProtectedRoute from './pages/ProtectedRoute';
 import PaymentPage from './pages/PaymentPage';
 import ReceiptPage from './pages/ReceiptPage';
+import CrudFaculty from './pages/CrudFaculty';
+import Faculty from './pages/Faculty'; 
 
 const App = () => {
   return (
@@ -34,16 +36,10 @@ const App = () => {
         <Route path="/courses" element={<Courses />} />
         <Route path="/login" element={<Login />} />
         <Route path="/batchwise-placed-students/:batchId" element={<BatchwisePlacedStudents />} />
+        <Route path="/faculty" element={<Faculty />} />
 
        
-        <Route
-          path="/admin"
-          element={
-            <ProtectedRoute>
-              <AdminPage />
-            </ProtectedRoute>
-          }
-        />
+        <Route path="/admin" element={ <ProtectedRoute> <AdminPage /> </ProtectedRoute>}/>
 
         <Route
           path="/manage-data"
@@ -90,9 +86,16 @@ const App = () => {
           }
         />
 
+        <Route
+          path="/add-faculty"
+          element={
+            <ProtectedRoute>
+              <CrudFaculty />
+            </ProtectedRoute>
+          }
+        />
 
-          <Route 
-        
+        <Route 
         path="/payments" 
         element={
         <ProtectedRoute>
